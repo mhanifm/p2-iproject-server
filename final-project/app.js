@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production'){
-    require('dotenv').config();
+  require('dotenv').config();
 }
 
 const express = require('express')
@@ -15,5 +15,5 @@ app.use(express.urlencoded({extended: true}))
 app.use(router)
 
 app.listen(PORT, () => {
-  console.log(`App listening at http://localhost:${PORT}`)
+console.log(`App listening at http://localhost:${PORT}`)
 })
