@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       User.hasMany(models.Flight, {foreignKey: "authorId"})
+      User.belongsToMany(models.Flight, {through: models.PurchaseTicket, foreignKey: "userId"})
     }
   };
   User.init({
